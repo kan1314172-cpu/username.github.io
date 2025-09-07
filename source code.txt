@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บไซต์แนะนำตัว - หยอด</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Prompt", sans-serif;
+      background: linear-gradient(120deg, rgba(255,0,0,0.6), rgba(255,255,255,0.6), rgba(0,0,128,0.6));
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, red, purple);
+      border-bottom: 4px solid black;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .start-btn {
+      display: inline-block;
+      background: radial-gradient(circle, #fff, #00aa55, #ff6600);
+      color: black;
+      padding: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.3s;
+      margin-top: 100px;
+    }
+    .start-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .menu {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ff6699, #6600cc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .ball:hover {
+      transform: scale(1.2);
+      background: radial-gradient(circle, #ff9966, #cc0099);
+    }
+
+    .card {
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      line-height: 1.6;
+    }
+
+    button.back-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff4444;
+      color: white;
+      font-size: 16px;
+    }
+    button.back-btn:hover {
+      background: #cc0000;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <header>เว็บไซต์นี้เป็นเว็บไซต์ทดลองที่ผมเขียนขึ้นมา</header>
+
+  <!-- หน้าแรก -->
+  <section id="home">
+    <div class="start-btn" onclick="showPage('menu')">Start</div>
+  </section>
+
+  <!-- เมนู -->
+  <section id="menu" class="hidden">
+    <h2>เลือกสิ่งที่คุณอยากรู้</h2>
+    <div class="menu">
+      <div class="ball" onclick="showPage('about')">แนะนำตัว</div>
+      <div class="ball" onclick="showPage('instagram')">Instagram</div>
+      <div class="ball" onclick="showPage('tiktok')">TikTok</div>
+      <div class="ball" onclick="showPage('life')">ประสบการณ์</div>
+      <div class="ball" onclick="showPage('hobby')">งานอดิเรก</div>
+    </div>
+  </section>
+
+  <!-- แนะนำตัว -->
+  <section id="about" class="hidden">
+    <div class="card">
+      <h2>แนะนำตัว</h2>
+      <p>สวัสดีครับ ผมชื่อหยอด อายุ 14 อาศัยอยู่จังหวัดจันทบุรีครับ 
+      ที่ผมทำเว็บไซต์นี้ขึ้นมาเพราะผมอยากจะศึกษาหรือทดสอบเว็บที่ผมเขียน 
+      โดยเว็บไซต์นี้ใช้เวลาทั้งสิ้น 10 ชั่วโมงเต็มแบบไม่พักครับ</p>
+      <p>แล้วผมก็อยากจะแนะนำตัวครับ 🙏</p>
+      <button class="back-btn" onclick="showPage('menu')">⬅ กลับ</button>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section id="instagram" class="hidden">
+    <div class="card">
+      <h2>Instagram ของผม</h2>
+      <p>ติดตามได้ที่นี่ 👉 
+        <a href="https://www.instagram.com/yuki._.suo123?igsh=MWtiNDJqcXNvbGN1OQ==" target="_blank">Instagram</a>
+      </p>
+      <button class="back-btn" onclick="showPage('menu')">⬅ กลับ</button>
+    </div>
+  </section>
+
+  <!-- TikTok -->
+  <section id="tiktok" class="hidden">
+    <div class="card">
+      <h2>TikTok ของผม</h2>
+      <p>ติดตามได้ที่นี่ 👉 
+        <a href="https://www.tiktok.com/@oo89_sofj2177?_t=ZS-8zWeu3YzL7f&_r=1" target="_blank">TikTok</a>
+      </p>
+      <button class="back-btn" onclick="showPage('menu')">⬅ กลับ</button>
+    </div>
+  </section>
+
+  <!-- ประสบการณ์ -->
+  <section id="life" class="hidden">
+    <div class="card">
+      <h2>ประสบการณ์ชีวิต</h2>
+      <p>
+        สวัสดีครับ ผมจะมาเล่าว่าก่อนหันมาเทรด, เขียนโปรแกรม, พัฒนาตัวเองหรือแม้กระทั่งการสนใจเรื่องหาเงิน...
+        <br><br>
+        (👉สวัสดีครับผมจะมาเล่าว่าก่อนหันมาเทรด,เขียนโปรแกรม,พัฒนาตัวเองหรือแม้กระทั้งการสนใจเรื่อหาเงินกอนที่ผมจะมานั่งทำแบบนี้ผมทำอะำรอยู่ในชีวิต           สวัสดีครับ ผมชื่อหยอดอายุ14งานอดิเร็กชอบเล่นดนตรี และความชอบของผมคือ การอยู่คนเดียว ทำอะไรคนเดียว แต่ผมก็ไม่ได้อยู่คนเียวร้อยเปอร์เซ้้นนะ ผมยังมีพ่อแม่พี่เพื่อน ซึ่งเพื่อนผมมีไม่ถึงสามคนเลยมั้ง ไม่รู้สิ 555ที่เหลือไม่มีหลอกมันเห็นว่าผมหมดประโยชแล้ว555 รู้มั้ยเมื่อก่อนอะ ผมเป็นเด็ฏท่ีไม่เอาไรแล้วชีวิต พูดง่ายๆ ทำรายชีวิตตัวเอง ช่วงนั้นชีวิตส้นตีนมาก [เออตอนนี้ก็นส้นตีน555]เมื่อก่อนผมชอบแว้น ขี่รถก่อกวนชาวบ้านไม่สนห่าไรใครจะด่าใครจะว่าเมื่อก่อนผมอ้วนมาก แต่ผมไม่ยอมรับว่าผมอ้วนนะตอนนนั้นปี2023โอเคๆ ขออนุญาติย้อนกลับไป2021ถึง2022หน่อยนะครับ ตอนนั้นผมเป็นเด็กกระโปกที่ชอบตกปลา ผมมีเพื่อนอยู๋หนึ่งคน ผมขออนุญาติไม่เอ่ยชือเพื่อนนะครับ555 ผมเกิดในครอบครัวที่พออยู่พอกินครับ สร้างบ้านก็สร้างเอง พ่อเป็นคนงานก่อสร้างแม่ก็คอมช่วยพ่อ เคยมีอยู่ช่วงนึงด้วยแหละ แทบไม่มีจะแดก555อย่าไปสนใจเลยดีกว่า 555 ตอนนั้นผมก็ใช้ชีวิตตามเด็กน้อยกำลังเข้าวัยรุ่น โอเคครับ ไม่มีเรื่องไรหลอก ชอบโดนเพื่อนที่โรงเรียนแกล้งนิดห่นอย แต่ตอนอยู่ป.1คือโดนแกล้งหนักมากครับ 555อย่าไปพูดถึงเลยผมข้เกียจำ555 โอเคครับไม่มีอะไรหลอก เราข้าวไปปี2022เลยครับ ช่วงนั้นผมก็เริ่มตดรถละทรงเด็กแว้นขยะสังคมเริ่มออก อาจเป็นเพราะถิ่นที่ผมอยู่กับสังคมรอบตัวด้วยแหละครับ5555 มาช้วงปี2023เกือบจะปี2024นั่นแหละครับ ใช้ชีวิตแบบไม่สนไรเลยทำรายชีวิตตัวเอง ใช่ครับ ผมเป็นเด้กแว้นแต่งรถ ขับรถแรงๆชอบยกล้อไปเบิ้ลหนาบ้านเค้าิ แต่เพื่อนผมก็ไม่ได้ทิ้งผมนะ แต่ผมก็สงสารมันแหละ ที่มันต้องมาฝ่าฟันอะไรแบบนี้ไปกับผม เออ ผมลืมบอก ผมไม่ได้มองเพื่อนเป็นแค่เพื่อนนะ ผมมองคนๆนั้นเป็นทั้งครอบครัวและเพื่อน หรือเมียกูก็ได้ หยอกๆ  ปจุบันเพื่อนคนนี้อยู่กรุงเทรพนะครับ ก็ไม่ได้เจอกัน แต่เคยสัญยากันว่า จะเป็นเพื่อนกันต่อไปตลอดไปไม่ว่าจะอยู่ที่ไหน เพื่อนตนนี้เราอยู่ด้วยกันมา9จะ10ปีแล้ว โอเคครับตัดมาช่วง2024ช่วงไกล้ๆจะ2025 ปีใหม่ ผมต้องจากกับเพื่อนคนนั้นครับ เพราะผมจะไปทำงานที่สมุดปรากาน ตอนนั้น ผมยอมรับเลย ผมเบียว ผมไม่ได้พัฒนาตัวเองเลย ผมเบียวผมเบียวมากๆ ไม่มีผลงานเก่งแต่พูด พูโง่ายครับ คนโง่อวดฉลาด แต่ผมเริ่มมาพัฒนาและศึกษา จริงๆตอนอยู๋สมุดปราการได้1เดือน ตนนั้นผมออกกำลังกายอย่างเดียวครับ ลดไขมันก็ผิดๆ อดอาหารโปรตีนไม่ถึง พอเริ่มทำเริ่มแย่ เลยมาลองศึกษาดูใหม่ หลังจากนั้นก็ ตามที่คุรคิดแหละครับ กินเยอะกว่าเดิมอีก อีกกำลังกาย6วันต่อสัปดา ตอนนั้นติดวาดรูป ผมมีผู้หญิงอยู่คนนึงผมรู้จักเธอเพราะวาดรูปเลยนะ ผมพึ้งมาบอกชอบเธฮตอนกลับสมุดปรากาน ปจุบัญก็ยังอยู่ด้วยกันนะ พึ้งเลิกกันเมื่อวานด้วย  แต่ก็ยังคงอยู่ด้วยกัน พูดง่าย ห่างกันสัดพักนั่นแหละครับ เพราะช่วนี้ผมติดงานทำงานเขียนโปรแกรมเทรด ไม่ค่อยได้คุยกับใครรเลย จะคุยก็แค่วันที่เล่นเกม หรือตอนเย็น เศร้ามากกกกกงื้อออออออ สุดท้ยนี้ผมอยากบอกทุกคนว่า ชอบคุณที่นั่งอ่านข้อความผมจนจบนะครับ แล้วก็ ใช้ชีวิตกันให้คุ้มนะครับ อดีตก็ปล่อยผานมันไป ไปก่อนนะครับ สวัสดีและขอบคุณครับ ")
+      </p>
+      <button class="back-btn" onclick="showPage('menu')">⬅ กลับ</button>
+    </div>
+  </section>
+
+  <!-- งานอดิเรก -->
+  <section id="hobby" class="hidden">
+    <div class="card">
+      <h2>งานอดิเรกของผม</h2>
+      <p>งานอดิเรกของผมคือ ชอบเล่นดนตรี 🎵 วาดรูป ✏ และชอบอยู่คนเดียวบ้างเวลา 😌</p>
+      <button class="back-btn" onclick="showPage('menu')">⬅ กลับ</button>
+    </div>
+  </section>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
